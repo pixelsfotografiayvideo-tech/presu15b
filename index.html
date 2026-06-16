@@ -1847,6 +1847,160 @@
     .comp-cta-btn { font-size: 10px; padding: 14px 20px; letter-spacing: 1px; }
   }
 
+  /* ═══════════════════════════════
+     PAG 4B – COMPARADOR
+  ═══════════════════════════════ */
+  .pag-comparador {
+    background: var(--dark);
+    padding: 100px 40px;
+  }
+  .pag-comparador-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+  .pag-comp-text { flex: 1; min-width: 280px; }
+  .pag-comp-badge {
+    display: inline-block;
+    background: rgba(201,169,110,0.12);
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(201,169,110,0.25);
+  }
+  .pag-comp-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--white);
+    margin: 0 0 28px;
+  }
+  .pag-comp-headline em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .pag-comp-quote {
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+    margin: 0 0 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #bbb;
+    line-height: 1.7;
+    font-style: normal;
+  }
+  .pag-comp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .pag-comp-list li {
+    position: relative;
+    padding-left: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #999;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .pag-comp-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .pag-comp-col { flex: 0 0 400px; }
+  .pag-comp-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: col-resize;
+    user-select: none;
+    touch-action: none;
+  }
+  .pag-cimg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  .pag-cimg-top { clip-path: inset(0 50% 0 0); }
+  .pag-cdivider {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: rgba(255,255,255,0.6);
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  .pag-chandle {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px; height: 42px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 11;
+    font-size: 15px;
+    color: var(--black);
+    font-weight: 700;
+  }
+  .pag-clabel {
+    position: absolute;
+    top: 14px;
+    z-index: 12;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .05em;
+  }
+  .pag-clabel-left { left: 12px; background: rgba(10,10,10,0.75); color: #fff; }
+  .pag-clabel-right { right: 12px; background: var(--gold); color: var(--black); }
+  .pag-chint {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: .08em;
+    color: #555;
+    margin-top: 12px;
+    text-transform: lowercase;
+  }
+
+  @media (max-width: 768px) {
+    .pag-comparador { padding: 60px 20px; }
+    .pag-comparador-inner { flex-direction: column; gap: 40px; }
+    .pag-comp-col { flex: unset; width: 100%; }
+    .pag-comp-headline { font-size: clamp(28px, 8vw, 38px); }
+    .pag-comp-quote { font-size: 14px; }
+  }
+
 </style>
 </head>
 <body>
@@ -1908,6 +2062,42 @@
       <!-- FOTO 6 · Sección 4 · Galería foto pequeña derecha -->
       <img src="https://ik.imagekit.io/vkah3x39a/bajas%2015/6.jpg?updatedAt=1780780873246" alt="Quinceañera exterior">
     </div>
+  </div>
+</section>
+
+<!-- ═══ PAG 4B – COMPARADOR CELULAR VS PIXELS ═══ -->
+<section class="pag-comparador">
+  <div class="pag-comparador-inner">
+
+    <div class="pag-comp-text">
+      <div class="pag-comp-badge">El problema real</div>
+      <h2 class="pag-comp-headline">
+        Que la calidad de tus recuerdos esté a la altura de <em>tu noche</em>.
+      </h2>
+      <blockquote class="pag-comp-quote">
+        Dicen que las fotos de tus 15 son para toda la vida. Pero si ese recuerdo queda atrapado en la calidad de un celular, pierde la magia de lo que realmente sentiste.
+      </blockquote>
+      <ul class="pag-comp-list">
+        <li>El movimiento del vestido, las luces de la pista, las miradas de tus amigos... hay detalles que un teléfono simplemente no puede registrar.</li>
+        <li>Un momento tan único no se repite, y merece ser capturado con la calidad, la luz y la nitidez que una noche así exige.</li>
+        <li>Un recuerdo real, listo para convertirse en un álbum premium que vas a querer mostrar para siempre.</li>
+      </ul>
+    </div>
+
+    <div class="pag-comp-col">
+      <div class="pag-comp-wrap" id="pag-comp-wrap">
+        <!-- FOTO 20 · Sección Comparador · Foto Pixels (fondo, lado derecho) -->
+        <img src="https://ik.imagekit.io/vkah3x39a/comparativa/pixes%20baa.jpg" alt="Foto con Pixels" class="pag-cimg pag-cimg-bottom" />
+        <!-- FOTO 21 · Sección Comparador · Foto celular (top con clip, lado izquierdo) -->
+        <img src="https://ik.imagekit.io/vkah3x39a/comparativa/foto%20celu.jpg" alt="Foto con celular" class="pag-cimg pag-cimg-top" id="pag-comp-top" />
+        <div class="pag-cdivider" id="pag-cdivider"></div>
+        <div class="pag-chandle" id="pag-chandle">⇄</div>
+        <span class="pag-clabel pag-clabel-left">📱 Celular</span>
+        <span class="pag-clabel pag-clabel-right">📷 Pixels</span>
+      </div>
+      <p class="pag-chint">Arrastrá para comparar</p>
+    </div>
+
   </div>
 </section>
 
@@ -2717,8 +2907,39 @@
   });
 </script>
 
+<script>
+(function() {
+  var wrap = document.getElementById('pag-comp-wrap');
+  var topImg = document.getElementById('pag-comp-top');
+  var divider = document.getElementById('pag-cdivider');
+  var handle = document.getElementById('pag-chandle');
+  if (!wrap) return;
+  var active = false;
+
+  function move(x) {
+    var r = wrap.getBoundingClientRect();
+    var p = Math.min(Math.max((x - r.left) / r.width, 0.02), 0.98);
+    var pct = (p * 100).toFixed(1) + '%';
+    topImg.style.clipPath = 'inset(0 ' + (100 - p * 100).toFixed(1) + '% 0 0)';
+    divider.style.left = pct;
+    handle.style.left = pct;
+  }
+
+  wrap.addEventListener('mousedown', function(e) { active = true; move(e.clientX); });
+  document.addEventListener('mousemove', function(e) { if (active) move(e.clientX); });
+  document.addEventListener('mouseup', function() { active = false; });
+  wrap.addEventListener('touchstart', function(e) { active = true; move(e.touches[0].clientX); }, { passive: true });
+  document.addEventListener('touchmove', function(e) { if (active) move(e.touches[0].clientX); }, { passive: true });
+  document.addEventListener('touchend', function() { active = false; });
+})();
+</script>
+
 </body>
 </html>
+
+
+
+
 
 
 
